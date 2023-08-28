@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph.xml"
+    app:startDestination="@id/noteList">
+
+    <fragment
+        android:id="@+id/noteList"
+        android:name="com.example.firebasenoteapp.fragments.NoteList"
+        android:label="fragment_note_list"
+        tools:layout="@layout/fragment_note_list" >
+        <action
+            android:id="@+id/action_noteList_to_notesDetails"
+            app:destination="@id/notesDetails" />
+        <action
+            android:id="@+id/action_noteList_to_createNote"
+            app:destination="@id/createNote" />
+    </fragment>
+    <fragment
+        android:id="@+id/notesDetails"
+        android:name="com.example.firebasenoteapp.fragments.NotesDetails"
+        android:label="fragment_notes_details"
+        tools:layout="@layout/fragment_notes_details" >
+        <action
+            android:id="@+id/action_notesDetails_to_noteList"
+            app:destination="@id/noteList" />
+    </fragment>
+    <fragment
+        android:id="@+id/createNote"
+        android:name="com.example.firebasenoteapp.fragments.CreateNote"
+        android:label="fragment_create_note"
+        tools:layout="@layout/fragment_create_note" >
+        <action
+            android:id="@+id/action_createNote_to_noteList"
+            app:destination="@id/noteList" />
+    </fragment>
+</navigation>
