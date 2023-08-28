@@ -9,7 +9,9 @@ import android.view.ViewGroup
 import com.example.firebasenoteapp.R
 import com.example.firebasenoteapp.databinding.FragmentNoteListBinding
 import com.google.firebase.firestore.FirebaseFirestore
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class NoteList : Fragment() {
     private lateinit var binding: FragmentNoteListBinding
     override fun onCreateView(
